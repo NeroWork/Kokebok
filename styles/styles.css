@@ -132,7 +132,7 @@ body, html{
     background-attachment: fixed;
     background-position:0 15vh;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 
     transition: 1.5s;
 
