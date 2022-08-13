@@ -135,6 +135,7 @@ body, html{
     background-size: cover;
 
     transition: 1.5s;
+    transition: height 0.5s;
 
     display: flex;
     flex-flow: row nowrap;
