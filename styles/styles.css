@@ -82,6 +82,7 @@ body, html{
     height: 100%;
     width: 30%;
     order: 2;
+    padding:0 5px 0 5px;
 }
 .footer__nav__ul{
     height: 100%;
@@ -103,9 +104,11 @@ body, html{
 }
 .footer__p--1{
     order: 1;
+    padding:0 5px 0 5px;
 }
 .footer__p--2{
     order: 3;
+    padding:0 5px 0 5px;
 }
 
 .main{
@@ -158,6 +161,7 @@ body, html{
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-evenly;
+    text-align: center;
 
     min-height: 50vw;
 
@@ -173,16 +177,21 @@ body, html{
 .main__div2__h2{
     font-size: 5vw;
     text-decoration: underline #4F2034;
+    padding: 2rem;
+    padding-bottom: 1rem;
 }
 .main__div2__p{
-    font-size: 1.8vw;
+    font-size: 2.5vw;
+    padding: 2rem;
+    padding-top: 1rem;
 }
 .main__div2__sec{
     display: flex;
     width: 80%;
+    text-align: center;
 }
 .main__div2__sec__p{
-    font-size: 1.5vw;
+    font-size: 2.5vw;
 }
 .main__div2__form{
     padding: 1.5rem;
@@ -301,4 +310,19 @@ body, html{
     "div1"
     "div2"
     "div3";
+}
+
+@media screen and (max-width: 500px){
+    .main__div2__p{
+        font-size: max(1.8vw,12px);
+    }
+    .main__div2__sec__p{
+        font-size: max(1.8vw,12px);
+    }
+    .main__div2__h2{
+        font-size: max(4vw, 17px);
+    }
+    .main__div1__h1{
+        font-size: max(12vw, 25px);
+    }
 }
