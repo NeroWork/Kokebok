@@ -15,7 +15,7 @@ body, html{
     display: inline;
     color:#4F2034;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: max(2vw, 12px);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 15px;
@@ -75,7 +75,7 @@ body, html{
     align-items: center;
     font-family: 'Libre Baskerville', serif;
     color:#FFF1E1;
-    font-size: 1.5vw;
+    font-size: max(1.5vw, 8px);
     z-index: 3;
 }
 .footer__nav{
@@ -208,6 +208,8 @@ body, html{
     text-decoration: underline #4F2034;
 }
 .main__div3{
+    grid-area: "div3";
+    margin-top: 5px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -222,10 +224,11 @@ body, html{
 }
 .main__div3__h2{
     margin: 40px;
-    font-size: 3vw;
+    font-size: max(4vw,20px);
 }
 .main__div3__iframe{
-    margin-bottom: 30px;
+    padding: 0 2rem 2rem 2rem;
+    border-radius: 10%;
 }
 .main__div--Galeria{
     display: flex;
@@ -239,6 +242,7 @@ body, html{
 
     font-family: 'Libre Baskerville', serif;
     color:#4F2034;
+    z-index: 2;
 }
 .main__div--Galeria__div{
     display: flex;
@@ -248,13 +252,15 @@ body, html{
     width: 400px;
     background-color: #4F2034;
     color:#FFF1E1;
-    font-size: 1.5vw;
+    font-size: max(1.5vw,10px);
     align-items: center;
     border: #4F2034 2px solid;
 }
+.main__div--Galeria__div h2{
+    font-size: max(1.5vw,10px);
+}
 .main__div--Galeria__div__img{
     width: 100%;
-    background-color: red;
     overflow: hidden;
 }
 .main__div--Galeria__div__img img{
@@ -267,11 +273,32 @@ body, html{
 
 .body--index,
 .body--nosotros,
-.body--menu{
+.body--menu,
+.body--galeria{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100vh auto 15vh;
     grid-template-areas:
     "main"
     "footer";
+}
+
+.body--contacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 15vh;
+    grid-template-areas:
+    "main"
+    "footer";
+}
+.main--contacto{
+    display: grid;
+    grid-row: 1/2;
+    grid-area: "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh auto auto;
+    grid-template-areas:
+    "div1"
+    "div2"
+    "div3";
 }
