@@ -12,6 +12,7 @@ p{
     margin-bottom: 0%;
 }
 .cabecera__nav__ul__li{
+    width: fit-content;
     list-style: none;
     font-family: 'Libre Baskerville', serif;
     font-weight: bold;
@@ -21,19 +22,21 @@ p{
     font-size: max(2vw, 12px);
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
     border-radius: 5px;
 }
 .cabecera__nav__ul__li__a{
     color: inherit;
     text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+.cabecera__nav__ul__li__a:hover{
+    color: #4F2034;
+    border-bottom: #4F2034 solid 5px;
 }
 .cabecera__nav__ul__li__a:visited{
     color:inherit;
-}
-.cabecera__nav__ul__li:hover{
-    border-bottom: #4F2034 solid 5px;
 }
 .cabecera__nav__ul__li__a--conimg{
     height: 100%;
@@ -49,11 +52,6 @@ p{
     height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
 }
 .cabecera__nav{
     height: 100%;
@@ -66,22 +64,23 @@ p{
     background-color: #FFF1E1;
     border-bottom:#4F2034 inset 5px;
     z-index: 99;
+    left: 0px;
 }
 .footer{
-    grid-area: "footer";
-    height: 100%;
+    height: 15vh;
     width: 100%;
     bottom: 0;
     background-color: #4F2034;
     border-top: #381725 solid 5px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
     font-family: 'Libre Baskerville', serif;
     color:#FFF1E1;
     font-size: max(1.5vw, 8px);
     z-index: 3;
+}
+.footer__sect{
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 .footer__nav{
     height: 100%;
@@ -94,17 +93,9 @@ p{
     width: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
 }
 .footer__nav__ul__li{
     list-style: none;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
 }
 .footer__nav__ul__li__a__img{
     height: 2em;
@@ -118,25 +109,14 @@ p{
     padding:0 5px 0 5px;
 }
 
-.main{
-    grid-area: "main";
-    grid-row: 1/3;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100vh auto;
-    grid-template-areas:
-    "div1"
-    "div2";
-}
 .main__div1 {
-    grid-area: "div1";
-    margin-top: 10vh;
+    margin-top: 15vh;
 
     /* The image used */
     background-image: url("http://drive.google.com/uc?export=view&id=1qGTDDGSxbbMGMyuQSterqynxTDFm2bZA");
   
     /* Set a specific height */
-    height: 100%;
+    height: 85vh;
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -163,7 +143,6 @@ p{
 }
 
 .main__div2{
-    grid-area: "div2";
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -244,7 +223,6 @@ p{
     font-size: max(2.5vw,15px);
 }
 .main__div3{
-    grid-area: "div3";
     margin-top: 5px;
     display: flex;
     flex-flow: column nowrap;
@@ -267,7 +245,7 @@ p{
     width: 50vw;
     min-width: 320px;
     min-height: 250px;
-    padding: 0 1rem 1rem 1rem;
+    margin: 0 1rem 2rem 1rem;
     border-radius: 10%;
 }
 .main__div--Galeria{
@@ -312,38 +290,6 @@ p{
 }
 .main__div--Galeria__div__img img:hover{
     transform: scale(1.05);
-}
-
-.body--index,
-.body--nosotros,
-.body--menu,
-.body--galeria{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100vh auto 15vh;
-    grid-template-areas:
-    "main"
-    "footer";
-}
-
-.body--contacto{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 15vh;
-    grid-template-areas:
-    "main"
-    "footer";
-}
-.main--contacto{
-    display: grid;
-    grid-row: 1/2;
-    grid-area: "main";
-    grid-template-columns: 1fr;
-    grid-template-rows: 100vh auto auto;
-    grid-template-areas:
-    "div1"
-    "div2"
-    "div3";
 }
 
 @media screen and (max-width: 500px){
