@@ -14,16 +14,29 @@
     <title>Galeria</title>
 </head>
 <body>
-    <header class="cabecera">
-        <nav class="cabecera__nav container-fluid text-center">
-            <ul class="cabecera__nav__ul row align-items-center flex-nowrap g-0">
-                <li class="cabecera__nav__ul__li col"><a class="cabecera__nav__ul__li__a" href="nosotros.html">Nosotros</a></li>
-                <li class="cabecera__nav__ul__li col"><a class="cabecera__nav__ul__li__a" href="menu.html">Menu</a></li>
-                <li class="li--sinbc col"><a class="cabecera__nav__ul__li__a--conimg" href="../index.html"><img class="cabecera__nav__ul__li__a__img" src="http://drive.google.com/uc?export=view&id=1wiHJe6M0j1TGLysYR5GBlI9Q82LNFBeN" alt="Logo Kokebok"></a></li>
-                <li class="cabecera__nav__ul__li col"><a class="cabecera__nav__ul__li__a" href="contacto.html">Contacto</a></li>
-                <li class="cabecera__nav__ul__li col"><a class="cabecera__nav__ul__li__a" href="galeria.html">Galeria</a></li>
-            </ul>
-        </nav>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+            <div class="container-fluid justify-content-lg-around">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse order-1 order-lg-0 noflexgrow" id="navbarNavAltMarkup">
+                    <div class="navbar-nav justify-content-around maxwidth" >
+                      <a class="nav-link" href="nosotros.html">Nosotros</a>
+                      <a class="nav-link" href="menu.html">Menu</a>
+                    </div>
+                </div>
+                <a class="nav-link navbar-brand order-0 order-lg-1" href="../index.html">
+                        <img src="http://drive.google.com/uc?export=view&id=1wiHJe6M0j1TGLysYR5GBlI9Q82LNFBeN" height="80vh" alt="Logo Kokebok">
+                </a>
+                <div class="collapse navbar-collapse order-2 order-lg-2 noflexgrow" id="navbarNavAltMarkup">
+                    <div class="navbar-nav justify-content-around maxwidth">
+                      <a class="nav-link" href="contacto.html">Contacto</a>
+                      <a class="nav-link active" aria-current="page" href="galeria.html">Galeria</a>
+                    </div>
+                </div>
+            </div>
+          </nav>
     </header>
 
     <main class="main">
