@@ -50,8 +50,8 @@ p{
     width: 100%;
 }
 .footer__nav{
-    height: 100%;
-    width: 30%;
+    height: fit-content;
+    width: fit-content;
     order: 2;
     padding:0 5px 0 5px;
 }
@@ -259,7 +259,7 @@ p{
     transform: scale(1.05);
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 576px){
     .main__div2__p{
         font-size: max(1.8vw,12px);
     }
@@ -271,5 +271,11 @@ p{
     }
     .main__div1__h1{
         font-size: max(12vw, 25px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer{
+        height: 25vh;
     }
 }
