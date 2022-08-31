@@ -1,0 +1,28 @@
+.main__div3{
+    margin-top: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: $colorPrincipal;
+    border-top:$colorSecundario outset 5px;
+    height: min-content;
+
+    font-family: 'Libre Baskerville', serif;
+    color:$colorSecundario;
+}
+
+.main__div3__h2{
+    margin: 40px;
+    font-size: max(4vw,20px);
+}
+
+.main__div3__iframe{
+    height: 35vw;
+    width: 50vw;
+    min-width: 320px;
+    min-height: 250px;
+    margin: 0 1rem 2rem 1rem;
+    border-radius: 10%;
+}

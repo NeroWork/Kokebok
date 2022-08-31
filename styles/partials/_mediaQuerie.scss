@@ -1,0 +1,20 @@
+@media screen and (max-width: 576px){
+    .main__div2__p{
+        font-size: max(1.8vw,12px);
+    }
+    .main__div2__sec__p{
+        font-size: max(1.8vw,12px);
+    }
+    .main__div2__h2{
+        font-size: max(4vw, 17px);
+    }
+    .main__div1__h1{
+        font-size: max(12vw, 25px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer{
+        height: 25vh;
+    }
+}

@@ -1,0 +1,34 @@
+.main__div1 {
+    margin-top: 111px;
+
+    /* The image used */
+    background-image: url("http://drive.google.com/uc?export=view&id=1qGTDDGSxbbMGMyuQSterqynxTDFm2bZA");
+  
+    /* Set a specific height */
+    height: 85vh;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position:0 15vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: 1.5s;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        filter: saturate(170%);
+    }
+}
+
+.main__div1__h1{
+    font-family: 'Libre Baskerville', serif;
+    color:$colorPrincipal;
+    font-size: 14vw;
+    text-shadow: 2px 0 $colorSecundario, -2px 0 $colorSecundario, 0 2px $colorSecundario, 0 -2px $colorSecundario,
+    1px 1px $colorSecundario, -1px -1px $colorSecundario, 1px -1px $colorSecundario, -1px 1px $colorSecundario;
+}
