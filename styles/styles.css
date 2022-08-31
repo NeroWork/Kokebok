@@ -290,7 +290,7 @@
 }
 @media screen and (max-width: 576px) {
   .footer {
-    height: 25vh;
+    height: 20vh;
   }
 }
 * {
