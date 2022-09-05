@@ -1,0 +1,6 @@
+-Sumé keywords a todas las paginas.
+-Agregue una descripción concisa y precisa a cada una de las paginas.
+-Me aseguré de que la jerarquía de encabezados se respete en todas las paginas.
+-Generé un sitemap del sitio para posterior uso mediante herramientas web.
+-Controlé que los titulos de todas las paginas sean precisos, cortos, y descriptivos.
+-Vigilé que las fuentes e imágenes se suban con la mejor calidad posible y desde links de la web y no desde archivos locales.
