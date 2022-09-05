@@ -1,24 +1,21 @@
 .main__div1 {
-    margin-top: 15vh;
+    margin-top: map-get($map: $estilos, $key: alto-header);
 
     /* The image used */
     background-image: url("http://drive.google.com/uc?export=view&id=1qGTDDGSxbbMGMyuQSterqynxTDFm2bZA");
   
     /* Set a specific height */
-    height: 85vh;
+    height: map-get($map: $estilos, $key: alto-resto);
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position:0 15vh;
+    background-position:0 map-get($map: $estilos, $key: alto-header);
     background-repeat: no-repeat;
     background-size: cover;
 
     transition: 1.5s;
 
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
+    @include flexMixin(flex,row nowrap, center, center);
 
     &:hover{
         filter: saturate(170%);
@@ -26,8 +23,7 @@
 }
 
 .main__div1__h1{
-    font-family: 'Libre Baskerville', serif;
-    color:$colorPrincipal;
+    @extend %fuenteSecundaria;
     font-size: 14vw;
     text-shadow: 2px 0 $colorSecundario, -2px 0 $colorSecundario, 0 2px $colorSecundario, 0 -2px $colorSecundario,
     1px 1px $colorSecundario, -1px -1px $colorSecundario, 1px -1px $colorSecundario, -1px 1px $colorSecundario;

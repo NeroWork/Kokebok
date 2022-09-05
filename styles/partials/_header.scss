@@ -3,8 +3,7 @@
     border-bottom:$colorSecundario inset 5px;
     .navbar-nav{
         .nav-link{
-            font-family: 'Libre Baskerville', serif;
-            color:$colorSecundario;
+            @extend %fuentes;
             text-decoration: none;
             font-size: max(2vw, 20px);
             border-radius: 5px;
@@ -32,6 +31,6 @@
 .navbar-brand{
     padding: 0;
     img{
-        height: 15vh;
+        height: map-get($map: $estilos, $key: alto-header);
     }
 }

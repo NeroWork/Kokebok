@@ -1,10 +1,18 @@
+.main__div--Galeria, .main__div3, .main__div2, .navbar-custom .navbar-nav .nav-link {
+  font-family: "Libre Baskerville", serif;
+  color: #4F2034;
+}
+
+.main__div1__h1 {
+  font-family: "Libre Baskerville", serif;
+  color: #fff1e1;
+}
+
 .navbar-custom {
   background-color: #fff1e1;
   border-bottom: #4F2034 inset 5px;
 }
 .navbar-custom .navbar-nav .nav-link {
-  font-family: "Libre Baskerville", serif;
-  color: #4F2034;
   text-decoration: none;
   font-size: max(2vw, 20px);
   border-radius: 5px;
@@ -105,14 +113,13 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+  text-align: none;
 }
 .main__div1:hover {
   filter: saturate(170%);
 }
 
 .main__div1__h1 {
-  font-family: "Libre Baskerville", serif;
-  color: #fff1e1;
   font-size: 14vw;
   text-shadow: 2px 0 #4F2034, -2px 0 #4F2034, 0 2px #4F2034, 0 -2px #4F2034, 1px 1px #4F2034, -1px -1px #4F2034, 1px -1px #4F2034, -1px 1px #4F2034;
 }
@@ -127,8 +134,6 @@
   background-color: #fff1e1;
   border-top: #4F2034 outset 5px;
   height: 100%;
-  font-family: "Libre Baskerville", serif;
-  color: #4F2034;
   z-index: 2;
 }
 
@@ -216,13 +221,12 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-evenly;
+  text-align: none;
   background-color: #fff1e1;
   border-top: #4F2034 outset 5px;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  font-family: "Libre Baskerville", serif;
-  color: #4F2034;
 }
 
 .main__div3__h2 {
@@ -244,19 +248,21 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-evenly;
+  text-align: none;
   background-color: #fff1e1;
   border-top: #4F2034 outset 5px;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  font-family: "Libre Baskerville", serif;
-  color: #4F2034;
   z-index: 2;
 }
 
 .main__div--Galeria__div {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
+  justify-content: unset;
+  text-align: none;
   margin: 5vw 1.7vw;
   height: 18vw;
   width: 29vw;
@@ -265,7 +271,6 @@
   background-color: #4F2034;
   color: #fff1e1;
   font-size: max(1.5vw, 10px);
-  align-items: center;
   border: #4F2034 2px solid;
 }
 .main__div--Galeria__div h2 {
@@ -298,8 +303,6 @@
   .main__div1__h1 {
     font-size: max(12vw, 25px);
   }
-}
-@media screen and (max-width: 576px) {
   .footer {
     height: 20vh;
   }
@@ -310,7 +313,7 @@
 }
 
 body {
-  background-color: #FFF1E1;
+  background-color: #fff1e1;
 }
 body html {
   height: 100%;

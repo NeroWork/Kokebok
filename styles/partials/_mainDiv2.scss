@@ -1,9 +1,5 @@
 .main__div2{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
+    @include flexMixin(flex, column nowrap, center, space-evenly, center);
 
     min-height: 50vw;
 
@@ -11,8 +7,7 @@
     border-top:$colorSecundario outset 5px;
     height: 100%;
 
-    font-family: 'Libre Baskerville', serif;
-    color:$colorSecundario;
+    @extend %fuentes;
     z-index: 2;
 }
 

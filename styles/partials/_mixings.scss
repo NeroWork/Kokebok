@@ -1,0 +1,7 @@
+@mixin flexMixin ($m-display,$m-flexflow,$m-alignItems,$m-justify: unset,$m-textAlign: none){
+    display: $m-display;
+    flex-flow: $m-flexflow;
+    align-items: $m-alignItems;
+    justify-content: $m-justify;
+    text-align: $m-textAlign;
+}

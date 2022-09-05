@@ -1,16 +1,13 @@
 .main__div3{
     margin-top: 5px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-evenly;
+
+    @include flexMixin(flex, column nowrap, center, space-evenly);
 
     background-color: $colorPrincipal;
     border-top:$colorSecundario outset 5px;
     height: min-content;
 
-    font-family: 'Libre Baskerville', serif;
-    color:$colorSecundario;
+    @extend %fuentes;
 }
 
 .main__div3__h2{

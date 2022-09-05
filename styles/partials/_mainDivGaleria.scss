@@ -1,21 +1,16 @@
 .main__div--Galeria{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    @include flexMixin(flex, row wrap, center, space-evenly);
 
     background-color: $colorPrincipal;
     border-top:$colorSecundario outset 5px;
     height: min-content;
 
-    font-family: 'Libre Baskerville', serif;
-    color:$colorSecundario;
+    @extend %fuentes;
     z-index: 2;
 }
 
 .main__div--Galeria__div{
-    display: flex;
-    flex-flow: column nowrap;
+    @include flexMixin(flex, column nowrap, center);
     margin: 5vw 1.7vw;
     height: 18vw;
     width: 29vw;
@@ -24,7 +19,6 @@
     background-color: $colorSecundario;
     color:$colorPrincipal;
     font-size: max(1.5vw,10px);
-    align-items: center;
     border: $colorSecundario 2px solid;
     h2{
         font-size: max(1.5vw,10px);

@@ -1,11 +1,21 @@
-@import "./partials/colorVariables", "./partials/header", "./partials/footer", "./partials/mainDiv1", "./partials/mainDiv2", "./partials/mainDiv3", "./partials/mainDivGaleria", "./partials/mediaQuerie";
+@import "./partials/colorVariables",
+"./partials/maps",
+"./partials/extends",
+"./partials/mixings",
+"./partials/header",
+"./partials/footer",
+"./partials/mainDiv1",
+"./partials/mainDiv2",
+"./partials/mainDiv3",
+"./partials/mainDivGaleria",
+"./partials/mediaQuerie";
 
 *{
     margin: 0px;
     padding: 0px;
 }
 body{
-    background-color: #FFF1E1;
+    background-color: $colorPrincipal;
     html{
         height: 100%;
     }
