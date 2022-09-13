@@ -79,7 +79,7 @@
     border-width: 2px;
     border-style: solid;
     border-color: $colorSecundario;
-    border-image: initial;
+    border-radius: 10px;
 }
 
 .main__div2__form__leg{
@@ -87,16 +87,18 @@
     text-decoration: underline $colorSecundario;
     float: none;
     width: max-content;
-    font-size: max(2.5vw,15px);
+    font-size: max(3.5vw,15px);
 }
 
 .estilo__input{
     border-radius: 25px;
     padding-left: 20px;
+    padding-right: 20px;
     color: $colorSecundario;
     border: 2px solid $colorSecundario;
 }
 textarea{
+    padding: 10px;
     border-radius: 15px;
     border: 2px solid $colorSecundario;
     color: $colorSecundario;
