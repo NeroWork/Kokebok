@@ -9,32 +9,9 @@
     z-index: 2;
 }
 
-.main__div--Galeria__div{
-    @include flexMixin(flex, column nowrap, center);
-    margin: 5vw 1.7vw;
-    height: 18vw;
-    width: 29vw;
-    min-height: 100px;
-    min-width: 200px;
-    background-color: $colorSecundario;
-    color:$colorPrincipal;
+.main__div--Galeria__card{
+    background-color: $colorPrincipal;
+    color: $colorSecundario;
+    border: 2px solid $colorSecundario;
     font-size: max(1.5vw,10px);
-    border: $colorSecundario 2px solid;
-    h2{
-        font-size: max(1.5vw,10px);
-        margin: 0;
-    }
-}
-
-.main__div--Galeria__div__img{
-    width: 100%;
-    overflow: hidden;
-
-    img{
-        width: 100%;
-        transition: 1s;
-        &:hover{
-            transform: scale(1.05);
-        }
-    }
 }

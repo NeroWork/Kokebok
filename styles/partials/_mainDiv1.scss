@@ -28,3 +28,30 @@
     text-shadow: 2px 0 $colorSecundario, -2px 0 $colorSecundario, 0 2px $colorSecundario, 0 -2px $colorSecundario,
     1px 1px $colorSecundario, -1px -1px $colorSecundario, 1px -1px $colorSecundario, -1px 1px $colorSecundario;
 }
+
+.main__div1_nos {
+    @extend %fondoDiv1;
+
+    background-image: url("http://drive.google.com/uc?export=view&id=1MVOwftgAm0lF0oNQBrgEivfuyBp-8IzP");
+}
+
+.main__div1__menu {
+    @extend %fondoDiv1;
+
+    /* The image used */
+    background-image: url("http://drive.google.com/uc?export=view&id=1bX0A1OI6AyTvbDogxb6yCFGsjfihocCK");
+}
+
+.main__div1__contact{
+    @extend %fondoDiv1;
+
+    /* The image used */
+    background-image: url("http://drive.google.com/uc?export=view&id=1baX-19T7tj_mVRxKnNuHKFs-Fkc4dyQi");
+}
+
+.main__div1__galeria{
+    @extend %fondoDiv1;
+
+    /* The image used */
+    background-image: url("http://drive.google.com/uc?export=view&id=14KsuP1at_wqQSJCcoJnpQneRTP0-i6PN");
+}

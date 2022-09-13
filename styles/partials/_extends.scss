@@ -6,3 +6,26 @@
     font-family: 'Libre Baskerville', serif;
     color:$colorPrincipal;
 }
+%fondoDiv1{
+    margin-top: map-get($map: $estilos, $key: alto-header);
+
+    /* The image used */
+    background-image: url("http://drive.google.com/uc?export=view&id=1qGTDDGSxbbMGMyuQSterqynxTDFm2bZA");
+  
+    /* Set a specific height */
+    height: map-get($map: $estilos, $key: alto-resto);
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position:0 map-get($map: $estilos, $key: alto-header);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: 1.5s;
+
+    @include flexMixin(flex,row nowrap, center, center);
+
+    &:hover{
+        filter: saturate(170%);
+    }
+}
