@@ -43,9 +43,7 @@
     display: flex;
     flex-flow: column nowrap;
     text-align: start;
-    min-width: 30vw;
-    max-width: 600px;
-    width: 80vw;
+    width: 100%;
 }
 
 .main__div2__form__div{
@@ -80,6 +78,9 @@
     border-style: solid;
     border-color: $colorSecundario;
     border-radius: 10px;
+    min-width: 30vw;
+    max-width: 600px;
+    width: 80vw;
 }
 
 .main__div2__form__leg{
