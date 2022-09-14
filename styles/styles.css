@@ -69,6 +69,7 @@ p {
 
 .navbar-brand {
   padding: 0;
+  margin: 0;
 }
 .navbar-brand img {
   height: 15vh;
