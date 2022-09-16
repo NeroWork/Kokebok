@@ -15,3 +15,20 @@
         height: 20vh;
     }
 }
+
+@media screen and (min-width: 992px){
+    .navbar-nav{
+        .nav-link{
+            transition: transform .5s;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    .navbar-brand{
+        transition: transform .5s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

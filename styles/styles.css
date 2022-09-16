@@ -162,17 +162,17 @@ p {
 
 .main__div1__menu {
   /* The image used */
-  background-image: url("http://drive.google.com/uc?export=view&id=1bX0A1OI6AyTvbDogxb6yCFGsjfihocCK");
+  background-image: url("http://drive.google.com/uc?export=view&id=1t95om38_7CIedDtjCrN1kWKyyEL19pHT");
 }
 
 .main__div1__contact {
   /* The image used */
-  background-image: url("http://drive.google.com/uc?export=view&id=1baX-19T7tj_mVRxKnNuHKFs-Fkc4dyQi");
+  background-image: url("http://drive.google.com/uc?export=view&id=1vHwZPkQM2uh97nioVQdc1x9NLe_miupp");
 }
 
 .main__div1__galeria {
   /* The image used */
-  background-image: url("http://drive.google.com/uc?export=view&id=14KsuP1at_wqQSJCcoJnpQneRTP0-i6PN");
+  background-image: url("http://drive.google.com/uc?export=view&id=1cnkGWuPORMlZ3lyxDzsMAQrPXImpWN7E");
 }
 
 .main__div2 {
@@ -375,6 +375,20 @@ textarea {
   }
   .footer {
     height: 20vh;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar-nav .nav-link {
+    transition: transform 0.5s;
+  }
+  .navbar-nav .nav-link:hover {
+    transform: scale(1.2);
+  }
+  .navbar-brand {
+    transition: transform 0.5s;
+  }
+  .navbar-brand:hover {
+    transform: scale(1.1);
   }
 }
 body {
