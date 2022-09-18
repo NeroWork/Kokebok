@@ -26,7 +26,6 @@
 }
 
 .main__div2__sec{
-    display: flex;
     width: 80%;
     text-align: center;
 }
@@ -93,14 +92,21 @@
 
 .estilo__input{
     border-radius: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: $colorSecundario;
     border: 2px solid $colorSecundario;
 }
 textarea{
-    padding: 10px;
+    padding: .5rem 1rem .5rem 1rem;
     border-radius: 15px;
     border: 2px solid $colorSecundario;
     color: $colorSecundario;
+}
+
+select{
+    option{
+        background-color: $colorSecundario;
+        color: $colorPrincipal;
+    }
 }
