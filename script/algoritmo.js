@@ -13,7 +13,7 @@ function iniciarCompra(){
         alert("El total de la compra es de "+montoAcumulado);
         let montoConDescuento = aplicarDescuento(montoAcumulado);
         let montoConIVA = aplicarIVA(montoConDescuento);
-        aplicarCuotas(montoConIVA);
+        let montoConIntereses = aplicarCuotas(montoConIVA);
 
         let SeguirComprando = confirm("Desea seguir comprando?");
         if (SeguirComprando){
