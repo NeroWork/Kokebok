@@ -1,16 +1,52 @@
+//DEFINICION DE CLASE PRODUCTO
+class Producto{
+    constructor(nombre, precio){
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+} //TERMINA DECLARACION CLASE PRODUCTO
+
+
+//Empiza funcion GET MONTO ACUMULADO
+function getMontoAcumulado(arrayProductos){
+    let montoAcumulado = 0;
+
+    // for(const x of arrayProductos){ SERIA DEMASIADO FACIL;
+    //     montoAcumulado = montoAcumulado + x.precio;
+    // }
+
+    for(var i = 0; i != arrayProductos.length; i++){
+        montoAcumulado = montoAcumulado + arrayProductos[i].precio;
+    }
+    return montoAcumulado;
+} //TERMINA FUNCION GET MONTO ACUMULADO
+
 //EMPIEZA FUNCION INICIAR COMPRA
 function iniciarCompra(){
+    let vectorPedidos = [];
     let cantidadDeProductos = parseInt(prompt('Cuantos Productos queres comprar?'));
     if (cantidadDeProductos !== 0 && !isNaN(cantidadDeProductos)){
-        let montoAcumulado = 0;
         for(var i = 0; i != cantidadDeProductos; i++){
             let productoActual = prompt("Queres Lemonpie, Torta, o Alfajor?");
             let precioNuevo = definirProducto(productoActual);
-    
-            montoAcumulado = montoAcumulado + precioNuevo;
+            const productoaux = new Producto(productoActual.toLowerCase(), precioNuevo);
+            vectorPedidos.push(productoaux);
+
         }
-        
-        alert("El total de la compra es de "+montoAcumulado);
+        let montoAcumulado = getMontoAcumulado(vectorPedidos);
+
+        let verificarCompra = confirm("Desea revisar el carrito?");
+        if(verificarCompra){
+            verCarrito(vectorPedidos);
+        }
+
+        let boolModificarCompra = confirm("Desea modificar la compra?");
+        if(boolModificarCompra){
+            vectorPedidos = modificarCompra(vectorPedidos);
+            alert("se retorno bien");
+            montoAcumulado = getMontoAcumulado(vectorPedidos);
+        }
+
         let montoConDescuento = aplicarDescuento(montoAcumulado);
         let montoConIVA = aplicarIVA(montoConDescuento);
         let montoConIntereses = aplicarCuotas(montoConIVA);
@@ -24,7 +60,82 @@ function iniciarCompra(){
     } else{
         alert("Compra Finalizada");
     }
+    return vectorPedidos;
 }//TERMINA FUNCION INICIAR COMPRA
+
+//Empieza funcion modificar compra;
+function modificarCompra(vectorPedidos1){
+    let boolModificarCompra = true;
+
+    while(boolModificarCompra){
+        let cambio = prompt("Desea agregar o eliminar un producto?","ej: Agregar");
+        if(cambio.toLowerCase() === "agregar"){
+            alert("inicia agregacion");
+            let productoActual = prompt("Queres Lemonpie, Torta, o Alfajor?");
+            let precioNuevo = definirProducto(productoActual);
+            const productoaux = new Producto(productoActual.toLowerCase(), precioNuevo);
+            vectorPedidos1.push(productoaux);
+            alert("Agregado");
+        }
+        if(cambio.toLowerCase() === "eliminar"){
+            alert("Inicia eliminacion");
+            let productoActual = prompt("Que producto desea eliminar?","Ej: lemonpie");
+            productoActual = productoActual.toLowerCase();
+            const iterador = vectorPedidos1.findIndex(x => x.nombre === productoActual);
+            alert(iterador);
+            if (iterador != -1){
+                vectorPedidos1.splice(iterador,1);
+                alert("Eliminado");
+            } else{
+                alert("No se encontro");
+            }
+        }
+
+        let montoAcumulado = getMontoAcumulado(vectorPedidos1);
+
+        let verificarCompra = confirm("Desea revisar el carrito?");
+        if(verificarCompra){
+            verCarrito(vectorPedidos1);
+            alert("Monto total: $"+montoAcumulado);
+        }
+
+        boolModificarCompra = confirm("Desea modificar la compra?");
+    }
+    alert("se retorna");
+    return vectorPedidos1;
+}
+
+
+//Empieza funcion VER CARRITO;
+function verCarrito(array1){
+    const carrito = [];
+    const cantidades = [];
+    for(const x of array1){
+        let encontrado = false;
+        for(const z of carrito){
+            if(z.nombre === x.nombre){
+                encontrado = true;
+            }
+        }
+        if(encontrado === false){
+            let contaux = 0;
+            for(const y of array1){
+                if (y.nombre === x.nombre){
+                    contaux++;
+                }
+            }
+            carrito.push(x);
+            cantidades.push(contaux);
+        }
+    }
+    for(var it = 0; it != carrito.length; it++){
+        let nombreAux = carrito[it].nombre;
+        let precioAux = carrito[it].precio;
+        let cantidadAux = cantidades[it];
+        alert("Compraste "+cantidadAux+" "+nombreAux+" por $"+(precioAux*cantidadAux)+".");
+    }
+}//Termina funcion revisar carrito;
+
 
 //Empieza FUNCION DEFINIR PRODUCTO;
 function definirProducto(Producto){
@@ -98,5 +209,8 @@ function aplicarCuotas(montoAcumulado){
     return montoAcumulado;
 }
 
+
+
+
 //MAIN
-iniciarCompra();
+const vectorCompra = iniciarCompra();
