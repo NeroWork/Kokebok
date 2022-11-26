@@ -172,7 +172,7 @@
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  min-height: 50vw;
+  min-height: 85vh;
   background-color: #fff1e1;
   border-top: #4F2034 outset 5px;
   height: 100%;
@@ -263,9 +263,14 @@
 }
 
 .estilo__input {
+  outline: none;
   border-radius: 25px;
   padding-left: 1rem;
   padding-right: 1rem;
+  color: #4F2034;
+  border: 2px solid #4F2034;
+}
+.estilo__input::focus {
   color: #4F2034;
   border: 2px solid #4F2034;
 }

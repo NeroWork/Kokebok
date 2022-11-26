@@ -1,7 +1,7 @@
 .main__div2{
     @include flexMixin(flex, column nowrap, center, space-evenly, center);
 
-    min-height: 50vw;
+    min-height: 85vh;
 
     background-color: $colorPrincipal;
     border-top:$colorSecundario outset 5px;
@@ -91,12 +91,18 @@
 }
 
 .estilo__input{
+    outline: none;
     border-radius: 25px;
     padding-left: 1rem;
     padding-right: 1rem;
     color: $colorSecundario;
     border: 2px solid $colorSecundario;
+    &::focus{
+        color: $colorSecundario;
+        border: 2px solid $colorSecundario;
+    }
 }
+
 textarea{
     padding: .5rem 1rem .5rem 1rem;
     border-radius: 15px;
