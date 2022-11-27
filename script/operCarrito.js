@@ -72,29 +72,29 @@ function agregarAlCarrito(idProducto){
                 let nuevoProducto = new productoEnCarrito(producto, 1);
                 vecCarrito.push(nuevoProducto);
                 modificarCarrito(vecCarrito);
-                let elementoaux = document.querySelector("producto__x"+((vecCarrito.lenght)-1));
-                elementoaux.addEventListener("click", () => {eliminarDelCarrito(idProducto);});
+                // let elementoaux = document.querySelector("producto__x"+((vecCarrito.lenght)-1));
+                // elementoaux.addEventListener("click", () => {eliminarDelCarrito(idProducto);});
             }
         }
     }
 }
 
-function eliminarDelCarrito(itemID){
-    alert("intentando eliminar");
-    let vecCarrito = getCarrito();
-    let contador = -1;
-    let contadorAux = 0;
-    for (const prod of vecCarrito) {
-        if(prod.producto.id === itemID){
-            contador = contadorAux;
-        }
-        contadorAux++;
-    }
-    if(contador != -1){
-        vecCarrito.splice(contador,1);
-        modificarCarrito(vecCarrito);
-    }
-}
+// function eliminarDelCarrito(itemID){
+//     alert("intentando eliminar");
+//     let vecCarrito = getCarrito();
+//     let contador = -1;
+//     let contadorAux = 0;
+//     for (const prod of vecCarrito) {
+//         if(prod.producto.id === itemID){
+//             contador = contadorAux;
+//         }
+//         contadorAux++;
+//     }
+//     if(contador != -1){
+//         vecCarrito.splice(contador,1);
+//         modificarCarrito(vecCarrito);
+//     }
+// }
 
 function limpiarCarrito(){
     let vecaux = [];
