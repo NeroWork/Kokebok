@@ -46,20 +46,36 @@
             <h1 class="main__div1__h1">Carrito</h1>
         </div>
         <div class="main__div2">
-            <form action="" class="main__div2__form c_form">
-                <legend class="main__div2__form__leg mx-auto">Realice su pedido:</legend>
-                <fieldset class="main__div2__form__field mx-auto">
-                    <div class="main__div2__form__div c_div2">
-                        <label class="c_label" for="Pedido">Cuantos postres desea encargar?</label>
-                        <input  class="estilo__input c_cantidadPedidos" type="number" name="Cantidad">
+            <div class="main__div2__divCarrito">
+                <h2 class="carrito__h2">Carrito</h2>
+                <div class="container-fluid g-0">
+                    <div class="row divCarrito__divProductos g-0 mx-auto">
+                        <div class="producto__nombre col-8 text-start">
+                            <p>Vacio</p>
+                        </div>
+                        <div class="col">
+                            <div class="producto__precio">
+                                <p>0</p>
+                                <p>$0</p>
+                            </div>
+                        </div>
+                        <div class="producto__x col text-center">
+                            <p>X</p>
+                        </div>
                     </div>
-                    <div class="main__div2__form__div--boton">
-                        <input type="submit" value="Enviar" class="main__div2__form__boton--enviar c_boton">
+                    <div class="row carrito__divfinal">
+                        <div class="col">
+                            <p class="carrito__limpiar">Limpiar</h4>
+                        </div>
+                        <div class="col">
+                            <p class="carrito__total">Total: $0</h4>
+                        </div>
                     </div>
-                </fieldset>
-            </form>
+                </div>
+
+            </div>
         </div>
-        <div class="main__div2">
+        <!-- <div class="main__div2">
             <form action="" class="main__div2__form">
                 <legend class="main__div2__form__leg mx-auto">Realice su pedido:</legend>
                 <fieldset class="main__div2__form__field mx-auto">
@@ -92,7 +108,7 @@
                     </div>
                 </fieldset>
             </form>
-        </div>
+        </div> -->
     </main>
 
     <footer class="footer container-fluid g-0 text-center">
@@ -114,7 +130,8 @@
     <script src="/script/iniciarCompra.js" type="module"></script>
     <script src="/script/modificarPrecio.js" type="module"></script>
     <script src="/script/operCarrito.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="/script/productos.js" type="module"></script>
     <script src="/script/algoritmo.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

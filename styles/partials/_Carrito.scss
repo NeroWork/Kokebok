@@ -1,0 +1,47 @@
+.main__div2__divCarrito{
+    margin: 5%;
+    min-height: 50vh;
+    width: 80%;
+    border: 2px solid $colorSecundario;
+    border-radius: 15px;
+}
+.carrito__h2{
+    margin-top: 1rem;
+    color: $colorSecundario;
+    text-decoration: underline $colorSecundario;
+    font-size: max(3.5vw,15px);
+}
+.carrito__total{
+    margin-right: 1rem;
+    text-align: end;
+}
+.carrito__limpiar{
+    margin-left: 1rem;
+    text-align: start;
+}
+.divCarrito__divProductos{
+    height: 100%;
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid $colorSecundario;
+    border-radius: 1rem;
+    font-size: max(1.5vw, 8px);
+}
+
+.producto__nombre{
+    p{
+        margin-left: 1rem;
+    }
+}
+.producto__precio{
+    display: flex;
+    justify-content: space-between;
+    p{
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+.carrito__divfinal{
+    font-size: max(1.5vw, 8px);
+}
