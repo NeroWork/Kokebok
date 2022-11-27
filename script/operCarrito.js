@@ -8,14 +8,15 @@ class productoEnCarrito{
     }
     actualizarPrecio(){
         let nuevoPrecio = this.producto.precio*this.cantidad;
-        alert("nuevo precio: "+nuevoPrecio);
         return nuevoPrecio;
     };
 }
 
 function inicializarCarrito(){
     let objLimpiar = document.querySelector(".carrito__limpiar");
-    objLimpiar.addEventListener("click",() => {limpiarCarrito();});
+    if(objLimpiar){
+        objLimpiar.addEventListener("click",() => {limpiarCarrito();});
+    }
 }
 
 function crearCarrito(){
@@ -28,26 +29,21 @@ function crearCarrito(){
 function getCarrito(){
     let jsonaux = localStorage.getItem("vectorCarrito");
     let vecaux = JSON.parse(jsonaux);
-    alert("tipo getcarrito: "+typeof(vecaux));
     let vecCarritox = [];
-    alert("se empiezan a insertar los elementos");
     for (const elem of vecaux) {
         let aux = new productoEnCarrito(elem.producto, elem.cantidad);
         vecCarritox.push(aux);
     }
-    alert("se terminaron de insertar elementos");
     return vecCarritox;
 }
 
 function modificarCarrito(nuevoCarrito){
     let jsonaux = JSON.stringify(nuevoCarrito);
     localStorage.setItem("vectorCarrito", jsonaux);
-    alert("entra a dibujar");
     dibujarCarrito();
 }
 
 function agregarAlCarrito(idProducto){
-    alert("intentando agregar al carrito");
     let vectorProductos = getStock();
     for (const producto of vectorProductos) {
         if(producto.id === idProducto){
@@ -63,38 +59,33 @@ function agregarAlCarrito(idProducto){
                 contadorAux++;
             }
             if(encontrado === true){
-                alert("encontrado en "+contador);
                 vecCarrito[contador].cantidad = vecCarrito[contador].cantidad + 1;
                 vecCarrito[contador].preciototal = vecCarrito[contador].actualizarPrecio();
-                alert("precioActualizado: "+vecCarrito[contador].preciototal);
                 modificarCarrito(vecCarrito);
             } else{
                 let nuevoProducto = new productoEnCarrito(producto, 1);
                 vecCarrito.push(nuevoProducto);
                 modificarCarrito(vecCarrito);
-                // let elementoaux = document.querySelector("producto__x"+((vecCarrito.lenght)-1));
-                // elementoaux.addEventListener("click", () => {eliminarDelCarrito(idProducto);});
             }
         }
     }
 }
 
-// function eliminarDelCarrito(itemID){
-//     alert("intentando eliminar");
-//     let vecCarrito = getCarrito();
-//     let contador = -1;
-//     let contadorAux = 0;
-//     for (const prod of vecCarrito) {
-//         if(prod.producto.id === itemID){
-//             contador = contadorAux;
-//         }
-//         contadorAux++;
-//     }
-//     if(contador != -1){
-//         vecCarrito.splice(contador,1);
-//         modificarCarrito(vecCarrito);
-//     }
-// }
+function eliminarDelCarrito(itemID){
+    let vecCarrito = getCarrito();
+    let contador = -1;
+    let contadorAux = 0;
+    for (const prod of vecCarrito) {
+        if(prod.producto.id === itemID){
+            contador = contadorAux;
+        }
+        contadorAux++;
+    }
+    if(contador != -1){
+        vecCarrito.splice(contador,1);
+        modificarCarrito(vecCarrito);
+    }
+}
 
 function limpiarCarrito(){
     let vecaux = [];
@@ -104,14 +95,11 @@ function limpiarCarrito(){
 
 function dibujarCarrito(){
     let contenedorDeProductos = document.querySelector(".divCarrito__divProductos");
-    alert("empieza a dibujar");
     if(contenedorDeProductos){
         contenedorDeProductos.innerHTML = "";
         let vecCarritox = getCarrito();
         let largovector = vecCarritox.length;
-        alert("tamaño de vector: "+ largovector);
         if(largovector < 1){
-            alert("entra en if < 1");
             contenedorDeProductos.innerHTML =  `<div class="producto__nombre col-8 text-start">
                                                     <p>Vacio</p>
                                                 </div>
@@ -124,9 +112,11 @@ function dibujarCarrito(){
                                                 <div class="producto__x col text-center">
                                                     <p>X</p>
                                                 </div>`
-                                                alert("if < 1 ejecutado");
+                                                let elementoaux = document.querySelector(".carrito__total");
+                                                if(elementoaux){
+                                                    elementoaux.innerText = `Total: $0`;
+                                                }
         } else{
-            alert("entra en if >= 1");
             let contador = 0;
             for (const prod of vecCarritox) {
                 contenedorDeProductos.innerHTML +=  `<div class="producto__nombre col-8 text-start">
@@ -142,6 +132,23 @@ function dibujarCarrito(){
                                                         <p>X</p>
                                                     </div>`
                 contador++;
+            }
+            contador=0;
+            let costetotal=0;
+            for (const prod of vecCarritox) {
+                let elementoaux = document.querySelector(`.producto__x${contador}`);
+                if(elementoaux){
+                    let idProducto = prod.producto.id;
+                    elementoaux.addEventListener("click", () => {eliminarDelCarrito(idProducto);});
+                } else {
+                }
+                contador++;
+
+                costetotal = costetotal+prod.preciototal;
+            }
+            let elementoaux = document.querySelector(".carrito__total");
+            if(elementoaux){
+                elementoaux.innerText = `Total: $${costetotal}`;
             }
         }
     }
