@@ -1,4 +1,3 @@
-alert("productojs");
 import{agregarAlCarrito} from "./operCarrito.js";
 
 //DEFINICION DE CLASE PRODUCTO
@@ -30,7 +29,6 @@ function crearStock(){
     vectorProductos.push(prodaux);
     let vecjson = JSON.stringify(vectorProductos);
     localStorage.setItem("vectorProductos",vecjson);
-    alert("stock cargado");
 }
 
 function getStock(){
@@ -47,9 +45,7 @@ function getStock(){
 function inicializarGaleria(){
     if(document.querySelector(".prod1")){
         for(let i = 0; i < 8; i++){
-            alert(".prod"+(i+1));
             let objaux = document.querySelector(`.prod${i+1}`);
-            alert("inicializar galeria tipo: "+typeof(objaux));
             objaux.addEventListener("click", () => {agregarAlCarrito(i);});
         }
     }
