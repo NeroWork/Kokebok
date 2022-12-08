@@ -1,0 +1,22 @@
+{
+  "name": "kokebok",
+  "version": "1.0.0",
+  "description": "Pagina de kokebok 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeroWork/Kokebok-Furlan.git"
+  },
+  "keywords": [
+    "reposteria"
+  ],
+  "author": "Nero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeroWork/Kokebok-Furlan/issues"
+  },
+  "homepage": "https://github.com/NeroWork/Kokebok-Furlan#readme"
+}

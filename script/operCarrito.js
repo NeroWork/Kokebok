@@ -67,30 +67,112 @@ function agregarAlCarrito(idProducto){
                 vecCarrito.push(nuevoProducto);
                 modificarCarrito(vecCarrito);
             }
+            let nombreprod = producto.nombre;
+            Swal.fire({
+                text: `${nombreprod} agregado!`,
+                color: "#fff1e1",
+                icon: "success",
+                iconColor: "#fff1e1",
+                toast: true,
+                position: "top-right",
+                showConfirmButton: false,
+                timer: 2500,
+                customClass: {
+                    popup: "sweetToastColor",
+                }
+            })
         }
     }
 }
 
 function eliminarDelCarrito(itemID){
-    let vecCarrito = getCarrito();
-    let contador = -1;
-    let contadorAux = 0;
-    for (const prod of vecCarrito) {
-        if(prod.producto.id === itemID){
-            contador = contadorAux;
+    Swal.fire({
+        title: "Desea eliminar el producto?",
+        icon: "question",
+        iconColor: "#4f2034",
+        color: "#4F2034",
+        showCancelButton: true,
+        customClass: {
+            popup: "sweetBackgroundColor",
+            title: "sweetLighterFont",
+            confirmButton: "sweetButton"
+        },
+        confirmButtonColor: "#4f2034",
+        confirmButtonText: "Aceptar",
+        cancelButtonText: "Cancelar",
+
+    }).then( (QuiereLimpiar) => {
+        if(QuiereLimpiar.isConfirmed){
+
+            Swal.fire({
+                title: "Producto eliminado",
+                icon: "success",
+                color: "#4F2034",
+                customClass: {
+                    popup: "sweetBackgroundColor",
+                    title: "sweetLighterFont",
+                    confirmButton: "sweetButton"
+                },
+                confirmButtonColor: "#4f2034",
+                confirmButtonText: "Aceptar",
+            })
+
+            let vecCarrito = getCarrito();
+            let contador = -1;
+            let contadorAux = 0;
+            for (const prod of vecCarrito) {
+                if(prod.producto.id === itemID){
+                    contador = contadorAux;
+                }
+                contadorAux++;
+            }
+            if(contador != -1){
+                vecCarrito.splice(contador,1);
+                modificarCarrito(vecCarrito);
+            }
         }
-        contadorAux++;
-    }
-    if(contador != -1){
-        vecCarrito.splice(contador,1);
-        modificarCarrito(vecCarrito);
-    }
+    })
 }
 
 function limpiarCarrito(){
-    let vecaux = [];
-    localStorage.setItem("vectorCarrito",JSON.stringify(vecaux));
-    dibujarCarrito();
+    Swal.fire({
+        title: "Desea limpiar el carrito?",
+        icon: "question",
+        iconColor: "#4f2034",
+        color: "#4F2034",
+        showCancelButton: true,
+        customClass: {
+            popup: "sweetBackgroundColor",
+            title: "sweetLighterFont",
+            confirmButton: "sweetButton"
+        },
+        confirmButtonColor: "#4f2034",
+        confirmButtonText: "Aceptar",
+        cancelButtonText: "Cancelar",
+
+    }).then( (QuiereLimpiar) => {
+        if(QuiereLimpiar.isConfirmed){
+
+            Swal.fire({
+                title: "Tu carrito ha sido limpiado",
+                icon: "success",
+                color: "#4F2034",
+                customClass: {
+                    popup: "sweetBackgroundColor",
+                    title: "sweetLighterFont",
+                    confirmButton: "sweetButton"
+                },
+                confirmButtonColor: "#4f2034",
+                confirmButtonText: "Aceptar",
+            })
+
+            let vecaux = [];
+            localStorage.setItem("vectorCarrito",JSON.stringify(vecaux));
+            dibujarCarrito();
+        }
+    }
+
+    )
 }
 
 function dibujarCarrito(){

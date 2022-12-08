@@ -45,3 +45,21 @@
 .carrito__divfinal{
     font-size: max(1.5vw, 8px);
 }
+.sweetLighterFont{
+    font-family: 'Libre Baskerville', serif !important;
+    color:$colorSecundario !important;
+    font-weight: lighter !important;
+}
+.sweetBackgroundColor{
+    background-color: #fff1e1 !important;
+}
+.sweetToastColor{
+    background: linear-gradient($colorSecundario, $colorTerciario) !important;
+    font-family: 'Libre Baskerville', serif !important;
+    font-weight: lighter !important;
+}
+.sweetButton:focus{
+    box-shadow: 0px 0px 0px 3px rgba(79, 32, 52, 0.3) !important;
+    font-family: 'Libre Baskerville', serif !important;
+    font-weight: lighter !important;
+}
