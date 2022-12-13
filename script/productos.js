@@ -9,24 +9,18 @@ class Producto{
     }
 } //TERMINA DECLARACION CLASE PRODUCTO
 
-function crearStock(){
+async function crearStock(){
     let vectorProductos = [];
-    let prodaux = new Producto("lemonpie",1200,0);
-    vectorProductos.push(prodaux);
-    prodaux = new Producto("alfajor",80,1);
-    vectorProductos.push(prodaux);
-    prodaux = new Producto("tartabombon",1300,2);
-    vectorProductos.push(prodaux);
-    prodaux = new Producto("pastafrola",1100,3);
-    vectorProductos.push(prodaux);
-    prodaux = new Producto("tiramisu",1000,4);
-    vectorProductos.push(prodaux);
-    prodaux = new Producto("cupcake",150,5);
-    vectorProductos.push(prodaux);
-    prodaux = new Producto("cheesecake",1050,6);
-    vectorProductos.push(prodaux);
-    prodaux = new Producto("tartafrutilla",1400,7);
-    vectorProductos.push(prodaux);
+    let prodaux;
+
+    const resp = await fetch('../stock.json');
+    const data = await resp.json();
+
+    data.forEach((product) => {
+        let stringaux = product.nombre.charAt(0).toUpperCase() + product.nombre.slice(1);
+        prodaux = new Producto(stringaux,product.precio,product.id);
+        vectorProductos.push(prodaux);
+    })
     let vecjson = JSON.stringify(vectorProductos);
     localStorage.setItem("vectorProductos",vecjson);
 }

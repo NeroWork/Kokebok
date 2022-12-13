@@ -461,10 +461,13 @@ select option {
   font-weight: lighter !important;
 }
 
-.sweetButton:focus {
-  box-shadow: 0px 0px 0px 3px rgba(79, 32, 52, 0.3) !important;
+.sweetButton {
   font-family: "Libre Baskerville", serif !important;
   font-weight: lighter !important;
+}
+
+.sweetButton:focus {
+  box-shadow: 0px 0px 0px 3px rgba(79, 32, 52, 0.3) !important;
 }
 
 * {

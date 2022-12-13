@@ -74,9 +74,9 @@ function agregarAlCarrito(idProducto){
                 icon: "success",
                 iconColor: "#fff1e1",
                 toast: true,
-                position: "top-right",
+                position: "bottom-right",
                 showConfirmButton: false,
-                timer: 2500,
+                timer: 2000,
                 customClass: {
                     popup: "sweetToastColor",
                 }
@@ -138,13 +138,14 @@ function limpiarCarrito(){
     Swal.fire({
         title: "Desea limpiar el carrito?",
         icon: "question",
-        iconColor: "#4f2034",
+        iconColor: "#fc8d4c",
         color: "#4F2034",
         showCancelButton: true,
         customClass: {
             popup: "sweetBackgroundColor",
             title: "sweetLighterFont",
-            confirmButton: "sweetButton"
+            confirmButton: "sweetButton",
+            cancelButton: "sweetButton"
         },
         confirmButtonColor: "#4f2034",
         confirmButtonText: "Aceptar",

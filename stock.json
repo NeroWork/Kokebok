@@ -1,0 +1,10 @@
+[
+    {"nombre": "lemonpie", "precio": 1250, "id": 0},
+    {"nombre": "alfajor", "precio": 80, "id": 1},
+    {"nombre": "tartabombon", "precio": 1500, "id": 2},
+    {"nombre": "pastafrola", "precio": 1300, "id": 3},
+    {"nombre": "tiramisu", "precio": 1200, "id": 4},
+    {"nombre": "cupcake", "precio": 200, "id": 5},
+    {"nombre": "cheesecake", "precio": 1400, "id": 6},
+    {"nombre": "tartafrutilla", "precio": 1600, "id": 7}
+]
