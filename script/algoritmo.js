@@ -5,13 +5,20 @@ function inicializar(){
     inicializarGaleria();
     crearStock();
     inicializarCarrito();
-    if(localStorage.getItem("vectorCarrito")){
+
+    localStorage.getItem("vectorCarrito") ? cargarCarro() : crearCarrito();
+
+
+    function cargarCarro(){
         let jsonCarrito = localStorage.getItem("vectorCarrito");
         let vecCarrito = JSON.parse(jsonCarrito);
         modificarCarrito(vecCarrito);
-    } else{
-        crearCarrito();
     }
+    // if(localStorage.getItem("vectorCarrito")){
+
+    // } else{
+    //     crearCarrito();
+    // }
 }
 //MAIN
 document.addEventListener('DOMContentLoaded',inicializar);
